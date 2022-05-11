@@ -63,7 +63,7 @@ app.get('/weather', (req, res) => {
 
                 if (weatherData)
                     return res.send({
-                        forecast: `This is currently ${weatherData.temperature} degrees out. There is a ${weatherData.precip}% chance of rain.`,
+                        forecast: `This is currently ${weatherData.temperature} degrees out. There is a ${weatherData.precip}% chance of rain and humidity is ${weatherData.humidity}.`,
                         location: geoData.place,
                         address: req.query.address
                     });
